@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artikel_kategoris",
+  "info": {
+    "singularName": "artikel-kategori",
+    "pluralName": "artikel-kategoris",
+    "displayName": "Artikel Kategori",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "artikels": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::artikel.artikel",
+      "inversedBy": "artikel_kategoris"
+    }
+  }
+}
