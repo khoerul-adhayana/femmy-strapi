@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_addresses",
+  "info": {
+    "singularName": "user-address",
+    "pluralName": "user-addresses",
+    "displayName": "User address",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Address": {
+      "type": "text"
+    },
+    "provinsi": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::provinsi.provinsi",
+      "inversedBy": "user_address"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "user_addresses"
+    },
+    "kabupaten": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::kabupaten.kabupaten",
+      "mappedBy": "user_address"
+    }
+  }
+}

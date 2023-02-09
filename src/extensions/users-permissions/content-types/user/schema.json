@@ -72,18 +72,6 @@
     "ocupation": {
       "type": "string"
     },
-    "city": {
-      "type": "string"
-    },
-    "district": {
-      "type": "string"
-    },
-    "address": {
-      "type": "text"
-    },
-    "shipAddress": {
-      "type": "text"
-    },
     "instagram": {
       "type": "string"
     },
@@ -96,6 +84,15 @@
         "Reseller",
         "Bestie"
       ]
+    },
+    "point": {
+      "type": "string"
+    },
+    "user_addresses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-address.user-address",
+      "mappedBy": "users_permissions_user"
     }
   }
 }

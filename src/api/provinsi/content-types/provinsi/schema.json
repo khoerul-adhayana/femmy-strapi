@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "provinsis",
+  "info": {
+    "singularName": "provinsi",
+    "pluralName": "provinsis",
+    "displayName": "Provinsi",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "kabupaten": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::kabupaten.kabupaten"
+    },
+    "user_address": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-address.user-address",
+      "mappedBy": "provinsi"
+    }
+  }
+}

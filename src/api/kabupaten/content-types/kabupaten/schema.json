@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kabupatens",
+  "info": {
+    "singularName": "kabupaten",
+    "pluralName": "kabupatens",
+    "displayName": "Kabupaten",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "user_address": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-address.user-address",
+      "inversedBy": "kabupaten"
+    },
+    "provinsi": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::provinsi.provinsi"
+    }
+  }
+}
