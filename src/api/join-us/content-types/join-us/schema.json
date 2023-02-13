@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "abouts",
+  "collectionName": "join_uses",
   "info": {
-    "singularName": "about",
-    "pluralName": "abouts",
-    "displayName": "About",
+    "singularName": "join-us",
+    "pluralName": "join-uses",
+    "displayName": "join us",
     "description": ""
   },
   "options": {
@@ -12,26 +12,25 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
-    },
-    "Description": {
-      "type": "richtext"
     },
     "slug": {
       "type": "uid",
-      "targetField": "Title"
+      "targetField": "title"
     },
-    "Image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
+    "description": {
+      "type": "richtext"
+    },
+    "Background": {
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

@@ -19,7 +19,12 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::artikel.artikel",
+      "private": true,
       "inversedBy": "artikel_kategoris"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

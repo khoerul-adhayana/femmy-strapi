@@ -12,19 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "name": {
       "type": "string"
     },
-    "user_address": {
+    "Provinsi": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::user-address.user-address",
-      "inversedBy": "kabupaten"
-    },
-    "provinsi": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::provinsi.provinsi"
+      "relation": "manyToOne",
+      "target": "api::provinsi.provinsi",
+      "inversedBy": "kabupatens"
     }
   }
 }

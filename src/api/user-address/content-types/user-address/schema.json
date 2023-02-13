@@ -12,14 +12,8 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Address": {
+    "address": {
       "type": "text"
-    },
-    "provinsi": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::provinsi.provinsi",
-      "inversedBy": "user_address"
     },
     "users_permissions_user": {
       "type": "relation",
@@ -27,11 +21,31 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "user_addresses"
     },
-    "kabupaten": {
+    "Kabupaten": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::kabupaten.kabupaten",
-      "mappedBy": "user_address"
+      "target": "api::kabupaten.kabupaten"
+    },
+    "Provinsi": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::provinsi.provinsi"
+    },
+    "kodepos": {
+      "type": "integer"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "default_address"
+    },
+    "status_default": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

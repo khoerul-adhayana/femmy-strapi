@@ -12,19 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "name": {
       "type": "string"
     },
-    "kabupaten": {
+    "kabupatens": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::kabupaten.kabupaten"
-    },
-    "user_address": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::user-address.user-address",
-      "mappedBy": "provinsi"
+      "relation": "oneToMany",
+      "target": "api::kabupaten.kabupaten",
+      "mappedBy": "Provinsi"
     }
   }
 }

@@ -93,6 +93,15 @@
       "relation": "oneToMany",
       "target": "api::user-address.user-address",
       "mappedBy": "users_permissions_user"
+    },
+    "ttl": {
+      "type": "date"
+    },
+    "default_address": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-address.user-address",
+      "inversedBy": "user"
     }
   }
 }

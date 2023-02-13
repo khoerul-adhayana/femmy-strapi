@@ -13,10 +13,13 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "minLength": 8
     },
     "Description": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "artikel_kategoris": {
       "type": "relation",
@@ -38,6 +41,9 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "PublishDate": {
+      "type": "date"
     }
   }
 }
