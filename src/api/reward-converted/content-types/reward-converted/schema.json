@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reward_converteds",
+  "info": {
+    "singularName": "reward-converted",
+    "pluralName": "reward-converteds",
+    "displayName": "Reward Converted",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "Upload": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Point": {
+      "type": "string"
+    }
+  }
+}

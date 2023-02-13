@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reward_transactions",
+  "info": {
+    "singularName": "reward-transaction",
+    "pluralName": "reward-transactions",
+    "displayName": "Reward Transaction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "reward_transactions"
+    },
+    "reward_product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::reward-product.reward-product",
+      "inversedBy": "reward_transaction"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Open",
+        "Proses",
+        "Closed"
+      ]
+    }
+  }
+}

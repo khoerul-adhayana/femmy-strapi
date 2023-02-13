@@ -102,6 +102,12 @@
       "relation": "oneToOne",
       "target": "api::user-address.user-address",
       "inversedBy": "user"
+    },
+    "reward_transactions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reward-transaction.reward-transaction",
+      "mappedBy": "users_permissions_user"
     }
   }
 }
