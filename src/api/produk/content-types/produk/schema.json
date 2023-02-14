@@ -38,6 +38,12 @@
     },
     "stars": {
       "type": "integer"
+    },
+    "whislists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::whislist.whislist",
+      "mappedBy": "produk"
     }
   }
 }

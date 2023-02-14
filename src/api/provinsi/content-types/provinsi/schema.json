@@ -13,13 +13,14 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "kabupatens": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::kabupaten.kabupaten",
-      "mappedBy": "Provinsi"
+      "mappedBy": "provinsi"
     }
   }
 }

@@ -108,6 +108,12 @@
       "relation": "oneToMany",
       "target": "api::reward-transaction.reward-transaction",
       "mappedBy": "users_permissions_user"
+    },
+    "whislists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::whislist.whislist",
+      "mappedBy": "users_permissions_user"
     }
   }
 }

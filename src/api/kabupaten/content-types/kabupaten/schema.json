@@ -15,7 +15,7 @@
     "name": {
       "type": "string"
     },
-    "Provinsi": {
+    "provinsi": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::provinsi.provinsi",

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "whislists",
+  "info": {
+    "singularName": "whislist",
+    "pluralName": "whislists",
+    "displayName": "whislist"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "whislists"
+    },
+    "produk": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::produk.produk",
+      "inversedBy": "whislists"
+    },
+    "quantity": {
+      "type": "integer"
+    }
+  }
+}
