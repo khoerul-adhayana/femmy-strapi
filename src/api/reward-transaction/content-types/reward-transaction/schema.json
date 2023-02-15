@@ -31,6 +31,15 @@
         "Proses",
         "Closed"
       ]
+    },
+    "reward_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::reward-type.reward-type",
+      "inversedBy": "reward_transaction"
+    },
+    "deficitPoint": {
+      "type": "integer"
     }
   }
 }
