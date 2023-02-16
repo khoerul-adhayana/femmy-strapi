@@ -20,6 +20,12 @@
       "relation": "manyToOne",
       "target": "api::provinsi.provinsi",
       "inversedBy": "kabupatens"
+    },
+    "kecamatans": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::kecamatan.kecamatan",
+      "mappedBy": "kabupaten"
     }
   }
 }

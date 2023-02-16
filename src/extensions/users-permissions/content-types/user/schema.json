@@ -94,7 +94,7 @@
       "target": "api::user-address.user-address",
       "mappedBy": "users_permissions_user"
     },
-    "ttl": {
+    "birthday": {
       "type": "date"
     },
     "default_address": {

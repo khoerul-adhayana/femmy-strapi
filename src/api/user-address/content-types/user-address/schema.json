@@ -46,6 +46,11 @@
     "status_default": {
       "type": "boolean",
       "default": false
+    },
+    "kecamatan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::kecamatan.kecamatan"
     }
   }
 }

@@ -17,9 +17,6 @@
       "relation": "oneToMany",
       "target": "plugin::users-permissions.user"
     },
-    "orderNumber": {
-      "type": "uid"
-    },
     "OrderDate": {
       "type": "date"
     },
@@ -36,6 +33,11 @@
     },
     "PaymentDate": {
       "type": "datetime"
+    },
+    "orderNumber": {
+      "type": "string",
+      "unique": true,
+      "required": false
     }
   }
 }

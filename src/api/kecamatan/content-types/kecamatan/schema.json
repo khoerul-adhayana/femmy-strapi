@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kecamatans",
+  "info": {
+    "singularName": "kecamatan",
+    "pluralName": "kecamatans",
+    "displayName": "kecamatan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "kabupaten": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::kabupaten.kabupaten",
+      "inversedBy": "kecamatans"
+    }
+  }
+}
